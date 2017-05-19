@@ -5,15 +5,6 @@
         <dependent-module archiveName="AtencionSolicitudes.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/AtencionSolicitudes/AtencionSolicitudes">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="AtencionSolicitudes.jar" deploy-path="/" handle="module:/resource/AtencionSolicitudes/AtencionSolicitudes">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="AtencionSolicitudes.jar" deploy-path="/" handle="module:/resource/AtencionSolicitudes/AtencionSolicitudes">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="AtencionSolicitudes.jar" deploy-path="/" handle="module:/resource/AtencionSolicitudes/AtencionSolicitudes">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="AtencionSolicitudesJersey"/>
         <property name="java-output-path" value="/AtencionSolicitudesJersey/build/classes"/>
     </wb-module>

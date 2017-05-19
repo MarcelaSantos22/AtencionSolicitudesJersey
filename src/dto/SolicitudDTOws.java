@@ -26,6 +26,23 @@ public class SolicitudDTOws {
 	
 	public SolicitudDTOws(){}
 
+	public SolicitudDTOws(int id, String descripcion, String complejidad, Date fechaSolicitud, Date fechaRespuesta,
+			String respuestaSolicitud, Cliente cliente, Sucursal sucursal, TipoSolicitud tipoSolicitud,
+			Empleado responsable) {
+		super();
+		this.id = id;
+		this.descripcion = descripcion;
+		this.complejidad = complejidad;
+		this.fechaSolicitud = fechaSolicitud;
+		this.fechaRespuesta = fechaRespuesta;
+		this.respuestaSolicitud = respuestaSolicitud;
+		this.cliente = cliente;
+		this.sucursal = sucursal;
+		this.tipoSolicitud = tipoSolicitud;
+		this.responsable = responsable;
+	}
+
+
 	public int getId() {
 		return id;
 	}
