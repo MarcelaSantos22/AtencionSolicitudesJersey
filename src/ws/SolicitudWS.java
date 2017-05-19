@@ -19,16 +19,16 @@ import dto.Solicitud;
 import dto.SolicitudDTOws;
 import exception.MyException;
 import exception.IWServiceException;
-import logicaNegocio.SolicitudService;
+import bl.SolicitudBL;
 import javassist.tools.rmi.RemoteException;
 
 /**
  * Servicios Web para logica del Negocio
  * de SolicitudService.
  * 
- * @author Diana Ciro
- * @author Milena Cardenas
- * @author Jorge Bojaca  
+ * @author Yuri Quejada
+ * @author Daniel Pelaez
+ * @author Jean Herrera 
  * @version 1.0
  */
 @Component
@@ -37,46 +37,48 @@ public class SolicitudWS {
 
 	/*Se realiza una inyeccion de dependencia, para crear una instancia de EncuestaService */
 	@Autowired
-	SolicitudService solicitudService;
+	SolicitudBL solicitudService;
 	
 	/**
 	 * Servicio para Obtener la lista de solicitures de un usuario enviado como parametro.
-	 * @param user identificador del usuario.
+	 * @param usuario identificador del usuario.
 	 * @return Lista de solicitudes.
 	 * @throws RemoteException llama las excepciones propias.
 	 */
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
-	public List<SolicitudDTOws> obtener(@QueryParam("user") String user) throws RemoteException {
+	public List<SolicitudDTOws> obtener(@QueryParam("usuario") String usuario) throws RemoteException, IWServiceException {
 		List<Solicitud> solicitudes = null;
 		List<SolicitudDTOws> solicitudesRet = null;
 		try {
-			solicitudes = solicitudService.obtenerSolicitudes(user);
+			solicitudes = solicitudService.obtenerSolicitudes(usuario);
 			if (!solicitudes.isEmpty()) {
 
 				solicitudesRet = new ArrayList<SolicitudDTOws>();
 				for (Solicitud solicitud : solicitudes) {
 
 					SolicitudDTOws solic = new SolicitudDTOws();
-					solic.setCliente(solicitud.getCliente().getNombres() + " " + solicitud.getCliente().getApellidos());
-					solic.setComplejidad(solicitud.getComplejidad());
+					solic.setId(solicitud.getId());
 					solic.setDescripcion(solicitud.getDescripcion());
+					solic.setComplejidad(solicitud.getComplejidad());
 					solic.setFechaSolicitud(solicitud.getFechaSolicitud());
 					solic.setFechaRespuesta(solicitud.getFechaRespuesta());
-					solic.setId(solicitud.getId());
+					solic.setRespuestaSolicitud(solicitud.getRespuestaSolicitud());
+					solic.setCliente(solicitud.getCliente());
+					solic.setSucursal(solicitud.getSucursal());
+					solic.setTipoSolicitud(solicitud.getTipoSolicitud());
+					solic.setResponsable(solicitud.getResponsable());
+					
 					if (solicitud.getResponsable() != null) {
-						solic.setResponsable(solicitud.getResponsable().getUser());
+						solic.setResponsable(solicitud.getResponsable());
 					}
-					solic.setTipoSolicitud(solicitud.getTipoSolicitud().getNombre());
-					solic.setProducto(solicitud.getProducto());
-					solic.setRespuestaSolicitud(solicitud.getRespuesta());
+					solic.setTipoSolicitud(solicitud.getTipoSolicitud());
+					solic.setRespuestaSolicitud(solicitud.getRespuestaSolicitud());
 					solicitudesRet.add(solic);
 				}
 			}
 			return solicitudesRet;
-		} catch (ExceptionDao e) {
-			throw new RemoteException(e);
-		} catch (IWServiceException e) {
+		} catch (MyException e) {
 			throw new RemoteException(e);
 		}
 	}
@@ -85,22 +87,20 @@ public class SolicitudWS {
 	 * Servicio para guardar una solicitud.
 	 * @param descripcion descripcion de la solicitud
 	 * @param tiposolicitud identificador del tipo de solicitud.
+	 * @param fechaSolicitud fecha en que se realizó la solicitud.
 	 * @param cliente identificador del cliente.
-	 * @param producto nombre del producto.
-	 * @param idSucursal identificador de la sucursa.
-	 * @return mensaje de confirmaciÃ³n.
+	 * @return mensaje de confirmación.
 	 */
 	@Produces(MediaType.TEXT_PLAIN)
 	@POST
 	@Path("Guardar")
 	public String guardar(@QueryParam("descripcion") String descripcion, @QueryParam("tiposolicitud") int tiposolicitud,
-			@QueryParam("cliente") String cliente, @QueryParam("producto") String producto,
-			@QueryParam("idsucursal") int idSucursal) {
+			@QueryParam("fechasolicitud") Date fechasolicitud, @QueryParam("cliente") String cliente) throws RemoteException{
 
 		try {
-			solicitudService.guardarSolicitud(descripcion, tiposolicitud, cliente, producto, idSucursal, new Date());
+			solicitudService.guardarSolicitud(descripcion, tiposolicitud, new Date(), cliente);
 			return "Se guardo correctamente la solicitud";
-		} catch (ExceptionDao e) {
+		} catch (MyException e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {
 			throw new RemoteException(e);
@@ -122,7 +122,7 @@ public class SolicitudWS {
 		try {
 			solicitudService.asignarResponsable(idSolicitud, usuarioResponsable, usuarioGerente);
 			return "Se asigno responsable correctamente";
-		} catch (ExceptionDao e) {
+		} catch (MyException e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {
 			throw new RemoteException(e);
@@ -145,7 +145,7 @@ public class SolicitudWS {
 		try {
 			solicitudService.responderSolicitud(idSolicitud, respuestaSolicitud, new Date(), usuarioResponsable);
 			return "Se respondio la solicitud correctamente";
-		} catch (ExceptionDao e) {
+		} catch (MyException e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {
 			throw new RemoteException(e);
@@ -168,22 +168,25 @@ public class SolicitudWS {
 			solicitud = solicitudService.obtenerSolicitud(idSolicitud);
 			if (solicitud != null) {
 				solic = new SolicitudDTOws();
-				solic.setCliente(solicitud.getCliente().getNombres() + " " + solicitud.getCliente().getApellidos());
-				solic.setComplejidad(solicitud.getComplejidad());
+				solic.setId(solicitud.getId());
 				solic.setDescripcion(solicitud.getDescripcion());
+				solic.setComplejidad(solicitud.getComplejidad());
 				solic.setFechaSolicitud(solicitud.getFechaSolicitud());
 				solic.setFechaRespuesta(solicitud.getFechaRespuesta());
-				solic.setId(solicitud.getId());
+				solic.setRespuestaSolicitud(solicitud.getRespuestaSolicitud());
+				solic.setCliente(solicitud.getCliente());
+				solic.setSucursal(solicitud.getSucursal());
+				solic.setTipoSolicitud(solicitud.getTipoSolicitud());
+				solic.setResponsable(solicitud.getResponsable());
 				if (solicitud.getResponsable() != null) {
-					solic.setResponsable(solicitud.getResponsable().getUser());
+					solic.setResponsable(solicitud.getResponsable());
 				}
-				solic.setTipoSolicitud(solicitud.getTipoSolicitud().getNombre());
-				solic.setProducto(solicitud.getProducto());
-				solic.setRespuestaSolicitud(solicitud.getRespuesta());
+				solic.setTipoSolicitud(solicitud.getTipoSolicitud());
+				solic.setRespuestaSolicitud(solicitud.getRespuestaSolicitud());
 			}
 
 			return solic;
-		} catch (ExceptionDao e) {
+		} catch (MyException e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {
 			throw new RemoteException(e);
@@ -208,23 +211,26 @@ public class SolicitudWS {
 				for (Solicitud solicitud : solicitudes) {
 
 					SolicitudDTOws solic = new SolicitudDTOws();
-					solic.setCliente(solicitud.getCliente().getNombres() + " " + solicitud.getCliente().getApellidos());
-					solic.setComplejidad(solicitud.getComplejidad());
+					solic.setId(solicitud.getId());
 					solic.setDescripcion(solicitud.getDescripcion());
+					solic.setComplejidad(solicitud.getComplejidad());
 					solic.setFechaSolicitud(solicitud.getFechaSolicitud());
 					solic.setFechaRespuesta(solicitud.getFechaRespuesta());
-					solic.setId(solicitud.getId());
+					solic.setRespuestaSolicitud(solicitud.getRespuestaSolicitud());
+					solic.setCliente(solicitud.getCliente());
+					solic.setSucursal(solicitud.getSucursal());
+					solic.setTipoSolicitud(solicitud.getTipoSolicitud());
+					solic.setResponsable(solicitud.getResponsable());
 					if (solicitud.getResponsable() != null) {
-						solic.setResponsable(solicitud.getResponsable().getUser());
+						solic.setResponsable(solicitud.getResponsable());
 					}
-					solic.setTipoSolicitud(solicitud.getTipoSolicitud().getNombre());
-					solic.setProducto(solicitud.getProducto());
-					solic.setRespuestaSolicitud(solicitud.getRespuesta());
+					solic.setTipoSolicitud(solicitud.getTipoSolicitud());
+					solic.setRespuestaSolicitud(solicitud.getRespuestaSolicitud());
 					solicitudesRet.add(solic);
 				}
 			}
 			return solicitudesRet;
-		} catch (ExceptionDao e) {
+		} catch (MyException e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {
 			throw new RemoteException(e);
@@ -250,23 +256,26 @@ public class SolicitudWS {
 				for (Solicitud solicitud : solicitudes) {
 
 					SolicitudDTOws solic = new SolicitudDTOws();
-					solic.setCliente(solicitud.getCliente().getNombres() + " " + solicitud.getCliente().getApellidos());
-					solic.setComplejidad(solicitud.getComplejidad());
+					solic.setId(solicitud.getId());
 					solic.setDescripcion(solicitud.getDescripcion());
+					solic.setComplejidad(solicitud.getComplejidad());
 					solic.setFechaSolicitud(solicitud.getFechaSolicitud());
 					solic.setFechaRespuesta(solicitud.getFechaRespuesta());
-					solic.setId(solicitud.getId());
+					solic.setRespuestaSolicitud(solicitud.getRespuestaSolicitud());
+					solic.setCliente(solicitud.getCliente());
+					solic.setSucursal(solicitud.getSucursal());
+					solic.setTipoSolicitud(solicitud.getTipoSolicitud());
+					solic.setResponsable(solicitud.getResponsable());
 					if (solicitud.getResponsable() != null) {
-						solic.setResponsable(solicitud.getResponsable().getUser());
+						solic.setResponsable(solicitud.getResponsable());
 					}
-					solic.setTipoSolicitud(solicitud.getTipoSolicitud().getNombre());
-					solic.setProducto(solicitud.getProducto());
-					solic.setRespuestaSolicitud(solicitud.getRespuesta());
+					solic.setTipoSolicitud(solicitud.getTipoSolicitud());
+					solic.setRespuestaSolicitud(solicitud.getRespuestaSolicitud());
 					solicitudesRet.add(solic);
 				}
 			}
 			return solicitudesRet;
-		} catch (ExceptionDao e) {
+		} catch (MyException e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {
 			throw new RemoteException(e);

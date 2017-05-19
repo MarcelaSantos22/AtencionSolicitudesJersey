@@ -9,220 +9,49 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/AtencionSolicitudes"/>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/mysql-connector-java-5.1.22-bin.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-apache-client-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-atom-abdera-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-guice-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-multipart-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-simple-server-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-spring-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/oauth-client-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/oauth-server-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/oauth-signature-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/asm-3.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-core-asl-1.5.5.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-jaxrs-1.5.5.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-mapper-asl-1.5.5.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-xc-1.5.5.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-client-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-core-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-json-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-server-1.4.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jettison-1.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jsr311-api-1.1.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Libreria log4j/log4j-1.2.17.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/antlr-2.7.6.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/commons-collections-3.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/dom4j-1.6.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/hibernate3.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/hibernate-jpa-2.0-api-1.0.1.Final.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/javassist-3.12.0.GA.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/jta-1.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/slf4j-api-1.6.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/LibreriasHibernate/slf4j-log4j12-1.7.2.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/com.springsource.org.aopalliance-1.0.0.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/commons-logging.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-aop-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-beans-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-context-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-core-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-expression-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-jdbc-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-orm-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-test-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-tx-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/export/estudiantes/daniel.pelaezp/AtencionSolicitudesIW/Librerias/Spring4/spring-web-4.1.6.RELEASE.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-core-asl-1.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-jaxrs-1.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-mapper-asl-1.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-xc-1.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-client-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-core-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-json-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-server-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-apache-client-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-atom-abdera-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-guice-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-multipart-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-simple-server-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-spring-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/oauth-client-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/oauth-server-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/oauth-signature-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Libreria log4j/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/LibreriasHibernate/slf4j-log4j12-1.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-aop-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-beans-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-context-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-core-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-expression-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-jdbc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-orm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-test-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-tx-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/Spring4/spring-web-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/w8/Documents/GitHub/AtencionSolicitudesIW/Librerias/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -1,7 +1,6 @@
 package dto;
 
-import java.util.date;
-
+import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -106,6 +105,8 @@ public class SolicitudDTOws {
 	public void setResponsable(Empleado responsable) {
 		this.responsable = responsable;
 	}
+
+	
 	
 	
 }
