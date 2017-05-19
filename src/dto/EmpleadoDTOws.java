@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
- * DTO para el servicio Web ClienteWS
+ * DTO para el servicio Web EmpleadoWS
  * 
  * @author Yuri Quejada
  * @author Daniel Pelaez
@@ -13,32 +13,27 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 /*Parsear de manera automatica los objetos de esta clase a formato JSON*/
 @XmlRootElement  
-public class ClienteDTOws {
+public class EmpleadoDTOws {
+
 	private String cedula; //PK
 	private String nombre;
 	private String apellido;
 	private String email;
-	private String telefono;
-	private String direccion;
 	private Usuario usuario;
 	
 	
-	public ClienteDTOws () {
+	public EmpleadoDTOws() {
 		
 	}
 	
-	public ClienteDTOws(String cedula, String nombre, String apellido, String email, String telefono, String direccion,
-			Usuario usuario) {
+	public EmpleadoDTOws(String cedula, String nombre, String apellido, String email, Usuario usuario) {
 		super();
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;
-		this.telefono = telefono;
-		this.direccion = direccion;
 		this.usuario = usuario;
 	}
-	
 	
 	
 	public String getCedula() {
@@ -65,25 +60,10 @@ public class ClienteDTOws {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getTelefono() {
-		return telefono;
-	}
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
-	public String getDireccion() {
-		return direccion;
-	}
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
-	}
 	public Usuario getUsuario() {
 		return usuario;
 	}
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	
-	
-
 }
