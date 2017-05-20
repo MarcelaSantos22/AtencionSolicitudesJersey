@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/asm-3.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-core-asl-1.5.5.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-jaxrs-1.5.5.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-mapper-asl-1.5.5.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jackson-xc-1.5.5.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-client-1.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-core-1.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-json-1.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jersey-server-1.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jettison-1.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/lib/jsr311-api-1.1.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/jersey-archive-1.4/jersey-archive-1.4/contribs/jersey-spring-1.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Libreria log4j/log4j-1.2.17.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/com.springsource.org.aopalliance-1.0.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/commons-logging.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-aop-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-beans-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-context-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-core-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-expression-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-jdbc-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-orm-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-test-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-tx-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/Spring4/spring-web-4.1.6.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/antlr-2.7.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/commons-collections-3.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/dom4j-1.6.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/hibernate3.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/hibernate-jpa-2.0-api-1.0.1.Final.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/javassist-3.12.0.GA.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/jta-1.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/slf4j-api-1.6.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/LibreriasHibernate/slf4j-log4j12-1.7.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/estudiantelis/AtencionSolicitudesIW/Librerias/mysql-connector-java-5.1.22-bin.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/AtencionSolicitudes"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

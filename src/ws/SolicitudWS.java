@@ -1,5 +1,6 @@
 package ws;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -20,7 +21,7 @@ import dto.SolicitudDTOws;
 import exception.MyException;
 import exception.IWServiceException;
 import bl.SolicitudBL;
-import javassist.tools.rmi.RemoteException;
+import java.rmi.RemoteException;
 
 /**
  * Servicios Web para logica del Negocio
@@ -48,7 +49,13 @@ public class SolicitudWS {
 	public void setSolicitudBL(SolicitudBL solicitudBL) {
 		this.solicitudBL = solicitudBL;
 	}
-
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	@Path("saludo")
+	public String saludo() throws RemoteException, IWServiceException{
+		return "Si señor";
+	}
 	/**
 	 * Servicio para Obtener la lista de solicitures de un usuario enviado como parametro.
 	 * @param usuario identificador del usuario.
@@ -58,11 +65,12 @@ public class SolicitudWS {
 	
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
-	public List<SolicitudDTOws> obtener(@QueryParam("usuario") String usuario) throws RemoteException, IWServiceException {
+	@Path("Obtener")
+	public List<SolicitudDTOws> obtener() throws RemoteException, IWServiceException {
 		List<Solicitud> solicitudes = null;
 		List<SolicitudDTOws> solicitudesRet = null;
 		try {
-			solicitudes = solicitudBL.obtenerSolicitudes(usuario);
+			solicitudes = solicitudBL.obtenerSolicitudes();
 			if (!solicitudes.isEmpty()) {
 
 				solicitudesRet = new ArrayList<SolicitudDTOws>();
@@ -90,7 +98,8 @@ public class SolicitudWS {
 			}
 			return solicitudesRet;
 		} catch (MyException e) {
-			throw new RemoteException(e);
+			System.out.println("Ex: "+e.getMessage());
+			throw new RemoteException(e.getMessage());
 		}
 	}
 
@@ -105,16 +114,16 @@ public class SolicitudWS {
 	@Produces(MediaType.TEXT_PLAIN)
 	@POST
 	@Path("Guardar")
-	public String guardar(@QueryParam("descripcion") String descripcion, 
-			@QueryParam("tiposolicitud") int tiposolicitud,
-			@QueryParam("fechasolicitud") Date fechasolicitud, 
+	public void guardar(@QueryParam("descripcion") String descripcion, 
+			@QueryParam("tiposolicitud") int tiposolicitud, 
 			@QueryParam("cliente") String cliente) throws RemoteException, IWServiceException{
-
+		/*SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date fechaSolicitud = null;*/
 		try {
+			//fechaNacimientoD = sdf.parse(fechaNacimiento);
 			solicitudBL.guardarSolicitud(descripcion, tiposolicitud, new Date(), cliente);
-			return "Se guardo correctamente la solicitud";
 		} catch (MyException e) {
-			throw new RemoteException(e);
+			throw new RemoteException("Error en servicio para guardar solicitud");
 		}
 	}
 	
@@ -130,12 +139,12 @@ public class SolicitudWS {
 	@Path("AsignarResponsable")
 	public String asignarResponsable(@QueryParam("idSolicitud") int idSolicitud,
 			@QueryParam("responsable") String usuarioResponsable,
-			@QueryParam("gerente") String usuarioGerente) throws IWServiceException {
+			@QueryParam("gerente") String usuarioGerente) throws RemoteException, IWServiceException {
 		try {
 			solicitudBL.asignarResponsable(idSolicitud, usuarioResponsable, usuarioGerente);
 			return "Se asigno responsable correctamente";
 		} catch (MyException e) {
-			throw new RemoteException(e);
+			throw new RemoteException(e.getMessage());
 		}
 	}
 	
@@ -150,13 +159,13 @@ public class SolicitudWS {
 	@PUT
 	@Path("ResponderSolicitud")
 	public String responderSolicitud(@QueryParam("idSolicitud") int idSolicitud,
-			@QueryParam("respuesta") String respuestaSolicitud, @QueryParam("responsable") String usuarioResponsable) throws IWServiceException {
+			@QueryParam("respuesta") String respuestaSolicitud, @QueryParam("responsable") String usuarioResponsable) throws IWServiceException, RemoteException {
 
 		try {
 			solicitudBL.responderSolicitud(idSolicitud, respuestaSolicitud, new Date(), usuarioResponsable);
 			return "Se respondio la solicitud correctamente";
 		} catch (MyException e) {
-			throw new RemoteException(e);
+			throw new RemoteException(e.getMessage());
 		}
 
 	}
@@ -169,7 +178,7 @@ public class SolicitudWS {
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	@Path("ObtenerSolicitud")
-	public SolicitudDTOws obtenerSolicitud(@QueryParam("idSolicitud") int idSolicitud) throws IWServiceException {
+	public SolicitudDTOws obtenerSolicitud(@QueryParam("idSolicitud") int idSolicitud) throws IWServiceException, RemoteException {
 		Solicitud solicitud = null;
 		SolicitudDTOws solic = null;
 		try {
@@ -195,7 +204,7 @@ public class SolicitudWS {
 
 			return solic;
 		} catch (MyException e) {
-			throw new RemoteException(e);
+			throw new RemoteException(e.getMessage());
 		}
 	}
 	
@@ -203,10 +212,10 @@ public class SolicitudWS {
 	 * Servicio para obtner una lista de Solicitudes en formato JSON
 	 * @return lista de solicitudes
 	 */
-	@Produces(MediaType.APPLICATION_JSON)
+	/*@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	@Path("infoTiempoRespuestas")
-	public List<SolicitudDTOws> infoTiemposRespuestas() throws IWServiceException {
+	public List<SolicitudDTOws> infoTiempoRespuestas() throws IWServiceException {
 		List<Solicitud> solicitudes = null;
 		List<SolicitudDTOws> solicitudesRet = null;
 		try {
@@ -239,7 +248,7 @@ public class SolicitudWS {
 		} catch (MyException e) {
 			throw new RemoteException(e);
 		}
-	}
+	}*/
 
 	/**
 	 * Servicio para obtner una lista de Solicitudes en formato JSON
@@ -248,7 +257,7 @@ public class SolicitudWS {
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	@Path("SolicitudesAtrasadas")
-	public List<SolicitudDTOws> solicitudesAtrasadas() throws IWServiceException {
+	public List<SolicitudDTOws> solicitudesAtrasadas() throws IWServiceException, RemoteException {
 		List<Solicitud> solicitudes = null;
 		List<SolicitudDTOws> solicitudesRet = null;
 		try {
@@ -279,7 +288,7 @@ public class SolicitudWS {
 			}
 			return solicitudesRet;
 		} catch (MyException e) {
-			throw new RemoteException(e);
+			throw new RemoteException(e.getMessage());
 		}
 	}
 
@@ -291,7 +300,7 @@ public class SolicitudWS {
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	@Path("Filtrar") 
-	public List<SolicitudDTOws> fitrarSolicitudes(@QueryParam("tipo") int tipoSolicitud) throws IWServiceException {
+	public List<SolicitudDTOws> fitrarSolicitudes(@QueryParam("tipo") int tipoSolicitud) throws IWServiceException, RemoteException {
 		List<Solicitud> solicitudes = null;
 		List<SolicitudDTOws> solicitudesRet = null;
 		try {
@@ -322,7 +331,7 @@ public class SolicitudWS {
 			}
 			return solicitudesRet;
 		} catch (MyException e) {
-			throw new RemoteException(e);
+			throw new RemoteException(e.getMessage());
 		}
 
 	}
