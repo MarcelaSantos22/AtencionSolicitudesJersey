@@ -1,0 +1,21 @@
+<div class="container-login">
+	<div class="header">
+		<h3>Inversiones XYZ Ltda</h3>
+		<img src="/AtencionSolicitudesJersey/resources/style/logo.png"
+			class="img-rounded" alt="logo" width="150" height="150">
+	</div>
+	<form name="login-form" class="login-form" ng-submit="autenticar()">
+		<div class="form-group">
+			<input type="text" name="nombreUsuario" ng-model="usuario"
+				class="form-control" id="nombreUsuario" placeholder="usuario"
+				required="required" autofocus> <input type="password"
+				id="inputPassword" ng-model="pwd" class="form-control"
+				placeholder="Password" required="required">
+		</div>
+		<button type="submit" ng-disabled="login-form.$invalid" id="iniciar">
+			Sign In</button>
+		<!-- 		<p class="message"> -->
+		<!-- 			Is not registered? <a ng-click="createAccount()">Create an account</a> -->
+		<!-- 		</p> -->
+	</form>
+</div>

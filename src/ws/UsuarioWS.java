@@ -14,9 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import bl.UsuarioBL;
-import dto.Cliente;
-import dto.Empleado;
-import dto.EmpleadoDTOws;
 import dto.Usuario;
 import dto.UsuarioDTOws;
 import exception.IWServiceException;
@@ -85,11 +82,8 @@ public class UsuarioWS {
 		
 		String exito = null;
 		try {
-			usuarioBL.autenticarUsuario(user, password);	
-			return exito = "Autenticacion  Exitosa";
-			
-			//con el objetoo session guardo el usuarrio.			
-			//sesion.setAttribute("Usuario", user);
+			 Usuario usuario = usuarioBL.autenticarUsuario(user, password);	
+			 exito = usuario.getRol().getDescripcion();
 			
 		} catch (MyException e) {
 			throw new RemoteException("Autenticacion Fallida " + e);
@@ -97,6 +91,7 @@ public class UsuarioWS {
 			throw new RemoteException("Autenticacion Fallida " + e);
 		}
 		
+		return exito;
 }
 	
 	/**
