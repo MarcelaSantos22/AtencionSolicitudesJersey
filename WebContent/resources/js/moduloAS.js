@@ -98,7 +98,7 @@ app.service('Autenticacion',  function($http) {
 			params : {
 				user : user,
 				password : password,
-				rol: rol
+				rol: 'Cliente'
 				}
 		});
 		}*/
