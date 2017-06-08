@@ -10,10 +10,12 @@ app.config([ '$routeProvider', function($routeProvider) {
 		controller : 'loginController'
 	});
 	$routeProvider.when('/solicitud', {
-		templateUrl : 'templates/solicitud.html'
+		templateUrl : 'templates/solicitud.html',
+		controller : 'solicitudController'
 	});
 	$routeProvider.when('/responderSolicitud', {
-		templateUrl : 'templates/responderSol.html'
+		templateUrl : 'templates/responderSol.html',
+		controller : 'responderSolController'
 	});
 } ]);
 
@@ -103,3 +105,109 @@ app.service('Autenticacion',  function($http) {
 		});
 		}*/
 	});
+
+/**
+ * Controlador con el fin de manejar las solciitudes, se hace 
+ * la inyección para poder usar el servicio web de Solicitudes
+ */
+app.controller('solicitudController',function(Solicitudes,$scope,$location){
+	
+	$scope.solicitud={
+			cliente:'',
+			tipoSolicitud:'',
+			descripcion: '',	
+	};
+	$scope.validar=function(){
+		texto=solicitud.tipo;
+		alert(texto);
+	}
+	$scope.guardar=function(){
+		Solicitudes.guardarSolicitud($scope.solicitud).success(function(data){
+			alert(data);
+			$location.url('/solicitud');
+			
+		})
+	}
+	
+})
+
+/**
+ * Controlador para manejar el formulario de Respuesta a solicitudes,
+ * se le inyecta el servicio Solicitudes
+ */
+app.controller('responderSolController', function(Solicitudes, $scope, $location) {
+	$scope.mostrar=false;
+	$scope.respuesta={
+			idSol:'',
+			respuesta:'',
+			responsable: ''
+	}
+	/*
+	Solicitudes.obtenerTodas().success(function(data) {		
+		$scope.solicitudes = data.solicitudDTOws;
+	});
+	$scope.mostrarSolicitudes = function() {
+		if($scope.mostrar==true){
+			$scope.mostrar=false;
+		}else{
+			$scope.mostrar=true;
+		}
+	}*/
+	$scope.guardarRespuesta=function(){
+		Solicitudes.responderSolicitud($scope.respuesta).success(function(data){
+			alert(data);
+			
+			//Recargar la tabla solicitudes para mostrar en la pagina
+			Solicitudes.obtenerTodas().success(function(data) {		
+				$scope.solicitudes = data.SolicitudDTOws;
+			});
+			$scope.respuesta={
+			idSol:'',
+			respuesta:'',
+			responsable: ''
+			}
+		})
+		
+	}
+
+});
+
+/*
+ * Servicio de Angular
+ * Encargado de hacer los llamados de los servicios Web para manejar las Solicitudes
+ */
+app.service('Solicitudes',function($http) {
+					/*this.obtenerTodas = function() {
+						return $http({
+							method : 'GET',
+							url : 'http://localhost:8080/AtencionSolicitudesJersey/rest/Solicitud/Obtener',
+							params : {
+								user : 'Ana2017'
+							}
+						});
+					}*/
+					this.guardarSolicitud = function(solicitud) {
+						return $http({
+							method : 'POST',
+							url : 'http://localhost:8080/AtencionSolicitudesJersey/rest/Solicitud/Guardar',
+							params : {
+								descripcion: solicitud.descripcion,
+								tiposolicitud: solicitud.tipo,
+								cliente:'1484635'
+							}
+						});
+					}
+					this.responderSolicitud=function(respuesta){
+						return $http({
+							method: 'PUT',
+							url:'http://localhost:8080/AtencionSolicitudesJersey/rest/Solicitud/ResponderSolicitud',
+							params:{
+								idSolicitud: respuesta.idSol,
+								respuesta: respuesta.descripcion,
+								responsable: '45466'
+							}
+								
+						});
+					}
+				});
+
