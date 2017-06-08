@@ -47,7 +47,8 @@ app.controller('loginController', function(Autenticacion, $scope, $location, $co
 						return;
 					}
 				}, function failure(data) {
-					alert(data.data);
+					
+					alert("Usuario y/o Contraseña Incorrectos");
 				});
 	}
 	
