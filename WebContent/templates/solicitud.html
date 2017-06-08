@@ -1,1 +1,65 @@
-<h3>Crear Solicitud</h3>
+<form class="form-horizontal" ng-submit="guardar()">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="style.css" rel="stylesheet" type="text/css"> <!--css -->
+<fieldset>
+
+<div id="idContenedor" class=" well">
+
+<!-- Form Name -->
+<legend class="titulo text-primary">Realizar Solicitud</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cliente">Cedula Cliente</label>  
+  <div class="col-md-4">
+  <input id="cliente" name="cliente" placeholder="" class="form-control input-md" type="text" ng-model="solicitud.cliente">
+    
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="tiposolicitud">Tipo Solicitud</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="tiposolicitud-0">
+      <input name="tiposolicitud" id="tiposolicitud-0" value="1" checked="checked" type="radio" ng-model="solicitud.tipo">
+      Petición
+    </label> 
+    <label class="radio-inline" for="tiposolicitud-1">
+      <input name="tiposolicitud" id="tiposolicitud-1" value="2" type="radio" ng-model="solicitud.tipo">
+      Queja
+    </label> 
+    <label class="radio-inline" for="tiposolicitud-2">
+      <input name="tiposolicitud" id="tiposolicitud-2" value="3" type="radio" ng-model="solicitud.tipo">
+      Reclamo
+    </label> 
+    <label class="radio-inline" for="tiposolicitud-3">
+      <input name="tiposolicitud" id="tiposolicitud-3" value="4" type="radio" ng-model="solicitud.tipo">
+      Sugerencia
+    </label>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="descripcion">Descripcion de la solicitud</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="descripcion" name="descripcion"  ng-model="solicitud.descripcion"></textarea>
+  </div>
+</div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Guardar"></label>
+  <div class="col-md-4">
+    <button type="ng-submit" id="Guardar" name="Guardar" class="btn btn-primary">Enviar</button>
+  </div>
+</div>
+
+</div>
+
+ <script src="/static/js/bootstrap.js"></script>
+</fieldset>
+</form>
