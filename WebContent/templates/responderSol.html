@@ -1,1 +1,49 @@
-<h3>Responder Solicitud</h3>
+<form class="form-horizontal">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="style.css" rel="stylesheet" type="text/css"> <!--css -->
+<fieldset class="form-group"> 
+
+<div id="idContenedor" class=" well">
+
+<!-- Form Name -->
+<legend class="titulo text-primary">Responder Solicitud</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="idSolicitud">Identificacion de la solicitud</label>  
+  <div class="col-md-2">
+  <input ng-model="respuesta.idSol id="idSolicitud" name="idSolicitud" placeholder="" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="responsable">Cedula Responsable</label>  
+  <div class="col-md-4">
+  <input id="responsable" name="responsable" placeholder="" class="form-control input-md" type="text" ng-model="solicitud.cliente">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="respuesta">Respuesta a la solicitud</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="respuesta" name="respuesta" ng-model=respuesta.descripcion></textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Responder"></label>
+  <div class="col-md-4">
+    <button id="Responder" name="Responder" class="btn btn-primary" ng-click="guardarRespuesta()">Responder</button>
+  </div>
+</div>
+</div>
+
+</fieldset>
+</form>
+ <script src="/static/js/bootstrap.js"></script>
